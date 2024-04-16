@@ -84,6 +84,7 @@ const ProjectList = () => {
             bottom: "auto",
             transform: "translate(-50%, -50%)",
           },
+          zIndex: "9999999",
         }}
       >
         <h2 className="text-xl font-bold mb-4">

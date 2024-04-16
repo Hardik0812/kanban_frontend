@@ -53,11 +53,9 @@ const Sidebar = () => {
   };
 
   return (
-    <div className="fixed top-0 left-0 w-[250px] h-screen bg-[#18171B] z-30 shadow-md flex flex-col justify-between">
+    <div className="fixed top-0 left-0 w-[250px] h-screen bg-customGreen z-30 shadow-md flex flex-col justify-between">
       <div>
-        <div className="text-lg font-bold p-8 text-white">
-          Kanban <span className="text-[#00B796]">App</span>
-        </div>
+        <div className="text-lg font-bold p-8 text-white">Kanban App</div>
         <nav>
           <ul className="flex flex-col pl-4 pr-4">
             {menuItems.map(({ icon, text, path }) => (
@@ -76,7 +74,7 @@ const Sidebar = () => {
         <UserProfile full_name={userData?.full_name} />
         <button
           onClick={handleLogout}
-          className="flex items-center justify-center w-full text-white bg-customGreen hover:bg-white hover:text-customGreen focus:outline-none focus:ring-4 focus:ring-blue-300 rounded-md cursor-pointer transition duration-150 ease-in-out px-2 py-1"
+          className="flex items-center justify-center w-full text-customGreen bg-white hover:bg-white hover:text-customGreen focus:outline-none focus:ring-4 focus:ring-blue-300 rounded-md cursor-pointer transition duration-150 ease-in-out px-2 py-1"
         >
           <FaSignOutAlt className="mr-2" />
           Logout

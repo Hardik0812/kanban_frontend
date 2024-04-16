@@ -63,7 +63,7 @@ const SignUp = () => {
 
   return (
     <AuthLayout>
-      <div className="col-span-7 sm:col-span-3  bg-black text-white flex justify-center items-center sm:items-start flex-col h-screen order-0 sm:order-1 px-3 sm:px-0">
+      <div className="col-span-7 sm:col-span-3 bg-white text-customGreen flex justify-center items-center sm:items-start flex-col h-screen order-0 sm:order-1 px-3 sm:px-0">
         <div className="w-full max-w-[430px] pl-[0px] sm:ml-[40px] lg:ml-[140px] pr-0 md:pr-10 xl:pr-0">
           <div className="mb-8">
             <button className="mb-4" onClick={() => navigate(-1)}>

@@ -98,7 +98,7 @@ export const deleteProject = createAsyncThunk(
   async (projectId, { rejectWithValue }) => {
     console.log(projectId);
     try {
-      const response = await ProjectApi.delete(projectId);
+      await ProjectApi.delete(projectId);
       Toast.success("Project deleted successfully!");
       return projectId;
     } catch (error) {

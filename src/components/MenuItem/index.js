@@ -1,10 +1,10 @@
 import React from "react";
 
 const MenuItem = ({ icon, text, isSelected, onClick }) => {
-  const itemClass = `text-sm flex items-center text-white py-2 px-4 mb-2 rounded-md cursor-pointer transition duration-150 ease-in-out ${
+  const itemClass = `text-sm flex items-center text-customGreen py-2 px-4 mb-2 rounded-md cursor-pointer transition duration-150 ease-in-out ${
     isSelected
-      ? "bg-customGreen text-white shadow-lg"
-      : "text-gray-700 hover:bg-white hover:text-customGreen hover:shadow"
+      ? "bg-white text-customGreen shadow-lg"
+      : "text-gray-700 hover:bg-customGreen hover:text-white hover:shadow"
   }`;
 
   return (
