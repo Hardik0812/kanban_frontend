@@ -44,7 +44,7 @@ const ForgotPassword = () => {
         <div className="w-full max-w-[430px] pl-[0px] sm:ml-[40px] 2xl:ml-[140px] pr-0 md:pr-10 xl:pr-0">
           <div className="mb-8">
             {" "}
-            <button className="mb-4" onClick={() => navigate(-1)}>
+            <button className="mb-4 text-customGreen" onClick={() => navigate(-1)}>
               <BackArrow />
             </button>
             <h1 className="text-lg text-center sm:text-left font-extrabold mb-2">

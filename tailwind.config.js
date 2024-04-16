@@ -16,7 +16,7 @@ module.exports = {
         "spin-slow": "spin 2s linear infinite",
       },
       colors: {
-        customGreen: "#00B796",
+        customGreen: "#007768",
         customGray: "#F3F3F3",
         grayShade: "#E4E4E4",
       },

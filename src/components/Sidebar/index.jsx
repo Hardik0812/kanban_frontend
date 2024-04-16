@@ -2,7 +2,7 @@ import React, { useEffect, useState, useCallback, useMemo } from "react";
 import { useNavigate, useLocation } from "react-router-dom";
 import { useSelector } from "react-redux";
 
-import { FaSignOutAlt, FaTachometerAlt, FaAppStore } from "react-icons/fa";
+import { FaSignOutAlt, FaAppStore } from "react-icons/fa";
 
 import MenuItem from "../MenuItem";
 import UserProfile from "../UserProfile";

@@ -10,7 +10,7 @@ const signupSchema = yup
     password: yup
       .string()
       .matches(
-        /^(?=.*[a-z])(?=.*[A-Z])(?=.*[!@#$%^&*()_+=\[\]{};':\",./<>?|\\]).{8,}$/,
+        /^(?=.*[a-z])(?=.*[A-Z])(?=.*[!@#$%^&*()_+=[]{}`;':".,<>?|\\]).{8,}$/,
         "Password must be at least 8 characters and contain at least one uppercase letter, one lowercase letter, and one special character"
       )
       .required("Password is required"),

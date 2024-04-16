@@ -43,7 +43,9 @@ const SignUp = () => {
   };
 
   const sendCodeToEmail = async (data) => {
+    setLoading(true)
     dispatch(sendOtp({ email: data.email })).then((response) => {
+      setLoading(false)
       if (
         response.payload.success === "True" ||
         response.payload.success === true
