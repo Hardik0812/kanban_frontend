@@ -12,6 +12,7 @@ const Sidebar = () => {
   const location = useLocation();
   const userData = useSelector((state) => state.auth.userDetails);
 
+
   const menuItems = useMemo(
     () => [
       // {
@@ -53,7 +54,7 @@ const Sidebar = () => {
   };
 
   return (
-    <div className="fixed top-0 left-0 w-[250px] h-screen bg-customGreen z-30 shadow-md flex flex-col justify-between">
+    <div className="fixed top-0 left-0 w-[250px] h-screen bg-customGreen shadow-md flex flex-col justify-between">
       <div>
         <div className="text-lg font-bold p-8 text-white">Kanban App</div>
         <nav>
