@@ -131,6 +131,19 @@ export const fetchUserDetails = createAsyncThunk(
   }
 );
 
+export const logoutUser = createAsyncThunk(
+  "auth/logout",
+  async (_, { rejectWithValue }) => {
+    try {
+      await AuthApi.logout();
+      localStorage.removeItem("accessToken");
+      return true;
+    } catch (error) {
+      return rejectWithValue(error.response?.data?.message || error.message);
+    }
+  }
+);
+
 const authSlice = createSlice({
   name: "auth",
   initialState,
@@ -139,11 +152,10 @@ const authSlice = createSlice({
       state.error = null;
     },
     logout: (state) => {
-      localStorage.removeItem("accessToken");
       state.error = null;
       state.userDetails = null;
     },
-    resetApp: () => {},
+    resetApp: () => { },
   },
   extraReducers: (builder) => {
     builder

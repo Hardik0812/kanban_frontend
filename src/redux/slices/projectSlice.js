@@ -115,11 +115,10 @@ const projectSlice = createSlice({
       state.error = null;
     },
     logout: (state) => {
-      localStorage.removeItem("accessToken");
       state.error = null;
-      state.userDetails = null;
+      state.projectList = [];
     },
-    resetApp: () => {},
+    resetApp: () => { },
   },
   extraReducers: (builder) => {
     builder

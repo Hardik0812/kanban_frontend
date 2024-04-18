@@ -30,6 +30,10 @@ export class AuthApi {
     return AuthService.post(urls.auth.check_email, data);
   }
 
+  static logout() {
+    return AuthService.postWithToken(urls.auth.logout);
+  }
+
   static fetchUserDetails() {
     return AuthService.getWithAuth(urls.auth.user_details);
   }

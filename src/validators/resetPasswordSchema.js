@@ -1,11 +1,13 @@
 import * as yup from "yup";
 
+const passwordRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*[!@#$%^&*()_+=\[\]{};':".,<>?|\\]).{8,}$/;
+
 const resetPasswordSchema = yup
   .object({
     password: yup
       .string()
       .matches(
-        /^(?=.*[a-z])(?=.*[A-Z])(?=.*[!@#$%^&*()_+=[]{}`;':".,<>?|\\]).{8,}$/,
+        passwordRegex,
         "Password must be at least 8 characters and contain at least one uppercase letter, one lowercase letter, and one special character"
       )
       .required("Password is required"),

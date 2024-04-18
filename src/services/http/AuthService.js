@@ -29,6 +29,21 @@ export class AuthService {
     }
   }
 
+  static async postWithToken(url, body, config = {}) {
+    try {
+      const token = localStorage.getItem("accessToken");
+      const headers = token ? { Authorization: `Bearer ${token}` } : {};
+      const response = await this.axiosInstance.post(url, body, {
+        ...config,
+        headers,
+      });
+      return response;
+    } catch (error) {
+      this.handleErrors(error);
+      return Promise.reject(error);
+    }
+  }
+
   static handleErrors(error) {
     if (error.response && error.response.status === 403) {
       Toast.error(

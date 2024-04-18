@@ -1,17 +1,18 @@
 import React, { useEffect, useState, useCallback, useMemo } from "react";
 import { useNavigate, useLocation } from "react-router-dom";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 
 import { FaSignOutAlt, FaAppStore } from "react-icons/fa";
 
 import MenuItem from "../MenuItem";
 import UserProfile from "../UserProfile";
+import { logoutUser } from "../../redux/slices/authSlice";
 
 const Sidebar = () => {
   const navigate = useNavigate();
+  const dispatch = useDispatch();
   const location = useLocation();
   const userData = useSelector((state) => state.auth.userDetails);
-
 
   const menuItems = useMemo(
     () => [
@@ -43,7 +44,7 @@ const Sidebar = () => {
   }, [findSelectedItem]);
 
   const handleLogout = async () => {
-    await localStorage.removeItem("accessToken");
+    await dispatch(logoutUser());
     navigate("/");
   };
 
