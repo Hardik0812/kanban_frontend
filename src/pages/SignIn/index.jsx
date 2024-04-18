@@ -38,7 +38,8 @@ const SignIn = () => {
         response.payload.success === "True" ||
         response.payload.success === true
       ) {
-        localStorage.setItem("accessToken", response.payload.data.access);
+        localStorage.setItem("full_name", response?.payload?.data?.userData?.full_name);
+        localStorage.setItem("accessToken", response?.payload?.data?.access);
         Toast.success(response.payload.message);
         navigate("/project");
       }

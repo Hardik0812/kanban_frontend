@@ -13,6 +13,7 @@ const Sidebar = () => {
   const dispatch = useDispatch();
   const location = useLocation();
   const userData = useSelector((state) => state.auth.userDetails);
+  const full_name = userData && userData.full_name ? userData.full_name : localStorage.getItem("full_name");
 
   const menuItems = useMemo(
     () => [
@@ -73,7 +74,7 @@ const Sidebar = () => {
         </nav>
       </div>
       <div className="p-4">
-        <UserProfile full_name={userData?.full_name} />
+        <UserProfile full_name={full_name} />
         <button
           onClick={handleLogout}
           className="flex items-center justify-center w-full text-customGreen bg-white hover:bg-white hover:text-customGreen focus:outline-none focus:ring-4 focus:ring-blue-300 rounded-md cursor-pointer transition duration-150 ease-in-out px-2 py-1"
